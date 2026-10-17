@@ -1,0 +1,39 @@
+Copyright (c) 2026 이동현 (Donghyun Lee). All rights reserved.
+
+[한국어]
+이 저장소와 https://donghyunlee.kr/practice/ 의 문제(지문, 시작 코드, 정답 코드, 힌트, 해설), 목표 그림,
+화면 문구, 프로그램 코드(채점기 포함)의 저작권은 이동현에게 있습니다.
+
+자유롭게 할 수 있는 것
+- 혼자 공부하며 문제를 푸는 것
+- 수업이나 스터디에서 사이트와 문제의 주소(링크)를 나누는 것
+- 문제 하나를 출처('파이썬 연습(donghyunlee.kr/practice)')를 밝혀 화면 캡처나 짧은 인용으로 소개하는 것
+
+허락을 받아야 하는 것
+- 문제, 해설, 그림을 모아 복제하거나 다른 사이트, 문제은행, 교재, 시험지에 옮겨 싣는 것
+- 문제나 코드로 돈을 받는 강의, 책, 앱, 서비스를 만드는 것
+- 코드(채점기 포함)를 가져다 다른 사이트나 프로그램을 만드는 것
+- 문제와 해설을 인공지능 학습용 데이터로 모으거나 쓰는 것
+
+문의: https://donghyunlee.kr/about/ 에 적힌 연락처
+
+[English]
+The problems (prompts, starter code, solutions, hints, explanations), target figures, interface text, and
+program code (including the grader) in this repository and at https://donghyunlee.kr/practice/ are protected
+by copyright. You may use the site for personal study, share links to the site or its problems in classes and
+study groups, and quote a single problem briefly with attribution. Any other use requires prior permission,
+including copying problems or explanations in bulk, republishing them on other sites, problem banks, textbooks,
+or exams, commercial use, reusing the code, and using the content as training data for artificial intelligence.
+Contact: see https://donghyunlee.kr/about/
+
+Third-party software
+This site uses open-source software under its own licenses. Their copyrights belong to their authors.
+- Pyodide 0.27.8, including micropip: Mozilla Public License 2.0 (loaded from jsDelivr)
+- Python 3.12: Python Software Foundation License
+- matplotlib: Matplotlib License (PSF-based)
+- NumPy, pandas: BSD 3-Clause License
+- seaborn 0.13.2: BSD 3-Clause License, Copyright (c) 2012-2023, Michael L. Waskom.
+  The wheel in assets/wheels is redistributed unmodified and contains the full license text in LICENSE.md.
+- Pretendard font: SIL Open Font License 1.1 (loaded from jsDelivr)
+Other packages that Pyodide loads with these (pyparsing, cycler, kiwisolver and others) follow their own licenses.
+Details: https://donghyunlee.kr/practice/#/terms
