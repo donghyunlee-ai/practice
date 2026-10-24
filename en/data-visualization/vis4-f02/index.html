@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sharing an axis between visitor lines and stay bars · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="The long-format DataFrame visits holds a museum&#x27;s records for a sunny week and a rainy week. visitors is the number of visitors that day (people), and…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis4-f02/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sharing an axis between visitor lines and stay bars · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="The long-format DataFrame visits holds a museum&#x27;s records for a sunny week and a rainy week. visitors is the number of visitors that day (people), and…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis4-f02/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis4-f02" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch4">Chapter 4: Seaborn basics</a></nav>
+    <h1>Sharing an axis between visitor lines and stay bars</h1>
+    <p class="tiny muted">Fill in the blanks · Medium · §4.3 Arranging charts and saving results</p>
+    <div class="static-problem"><p>The long-format DataFrame <code>visits</code> holds a museum&#x27;s records for a sunny week and a rainy week. <code>visitors</code> is the number of visitors that day (people), and <code>stay</code> is the average time visitors stayed (minutes). Make a figure with two Axes, one above the other. On the top Axes, draw lines of visitors by day for each kind of weather; on the bottom Axes, draw bars of the length of stay by day for each kind of weather.</p><p>Make the two Axes share only the axis that means the same thing in both. Look at what the x-axis and y-axis of each chart show, and choose the axis to share. Fill in the four blanks. In the first blank, write the number of rows and columns together, and in the second blank, write the argument that sets which axis to share.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis4-f02.png?v=20261024a" alt="Target figure for Sharing an axis between visitor lines and stay bars" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code with blanks</h2><pre class="static-code"><code>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+visits = pd.DataFrame({
+    &quot;day&quot;: [&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;] * 2,
+    &quot;weather&quot;: [&quot;Sunny&quot;] * 5 + [&quot;Rainy&quot;] * 5,
+    &quot;visitors&quot;: [120, 135, 128, 150, 210, 80, 95, 70, 88, 160],
+    &quot;stay&quot;: [48, 45, 50, 44, 38, 70, 66, 74, 68, 60],
+})
+
+fig, axes = plt.subplots(____, ____, figsize=(6, 5))
+sns.lineplot(data=visits, x=&quot;day&quot;, y=&quot;visitors&quot;, hue=&quot;weather&quot;, marker=&quot;o&quot;, ax=____)
+# Bar colors match the weather legend above, so only the top Axes gets a legend
+sns.barplot(data=visits, x=&quot;day&quot;, y=&quot;stay&quot;, hue=&quot;weather&quot;, errorbar=None, legend=False, ax=____)
+axes[0].set(title=&quot;Visitors per day&quot;, ylabel=&quot;Visitors (people)&quot;)
+axes[0].legend(title=&quot;Weather&quot;)
+axes[1].set(title=&quot;Average stay per visitor&quot;, xlabel=&quot;Day&quot;, ylabel=&quot;Stay (min)&quot;)
+fig.suptitle(&quot;Museum visits in a sunny and a rainy week&quot;)
+fig.tight_layout()
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis4-f02">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis4-w03/">← Average rating by genre with error bars turned off</a> · <a href="../#ch4">Contents</a> · <a href="../vis4-w05/">Saving a bar chart of movies by genre at a set pixel size →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

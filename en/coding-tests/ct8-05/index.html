@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The nickname back then · Python Coding Tests · Python Practice</title>
+  <meta name="description" content="Each time the user set or changed their nickname, a record [time, nickname] was added to logs, in order of time. The first record holds the nickname…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/coding-tests/ct8-05/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The nickname back then · Python Coding Tests · Python Practice">
+  <meta property="og:description" content="Each time the user set or changed their nickname, a record [time, nickname] was added to logs, in order of time. The first record holds the nickname…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/coding-tests/ct8-05/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/coding-test/p/ct8-05" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Coding Tests</a> › <a href="../#ch8">Chapter 8: Binary search</a></nav>
+    <h1>The nickname back then</h1>
+    <p class="tiny muted">Write code · Medium · §8.2 Writing binary search yourself</p>
+    <div class="static-problem"><p>Each time the user set or changed their nickname, a record <code>[time, nickname]</code> was added to <code>logs</code>, in order of time. The first record holds the nickname chosen at sign-up. If several records have the same time, the one later in <code>logs</code> is the later change.</p><p>The nickname shown at time <code>t</code> is the nickname of the record that comes last in <code>logs</code> among the records whose time is at most <code>t</code>. If <code>t</code> is earlier than the time of the first record, the user had not signed up yet, so the nickname shown is an empty string <code>&quot;&quot;</code>.</p><p><code>times</code> holds the times when this user&#x27;s comments were reported. Complete the function <code>solution</code>, which returns a list of the nickname shown at each time, in the same order as <code>times</code>.</p><h2>Function</h2><p><code>solution(logs, times)</code></p><h2>Constraints</h2><ul><li>The length of <code>logs</code> is from 1 to 100,000, and the records are in ascending order of time.</li><li>Each element of <code>logs</code> has the form <code>[time, nickname]</code>. The time is an integer from 0 to 1,000,000,000, and the nickname is a string of lowercase English letters and digits, with a length from 1 to 10.</li><li>The length of <code>times</code> is from 1 to 10,000, and each element is an integer from 0 to 1,000,000,000.</li></ul><h2>Examples</h2><div class="static-table"><table><thead><tr><th>logs</th><th>times</th><th>result</th></tr></thead><tbody><tr><td><code>[[10, &#x27;mina&#x27;], [25, &#x27;mina2&#x27;], [40, &#x27;sky&#x27;]]</code></td><td><code>[30, 12]</code></td><td><code>[&#x27;mina2&#x27;, &#x27;mina&#x27;]</code></td></tr><tr><td><code>[[3, &#x27;kim&#x27;], [8, &#x27;lee&#x27;], [9, &#x27;park&#x27;], [20, &#x27;choi&#x27;]]</code></td><td><code>[10, 4, 15]</code></td><td><code>[&#x27;park&#x27;, &#x27;kim&#x27;, &#x27;park&#x27;]</code></td></tr></tbody></table></div><h2>Starter code</h2><pre class="static-code"><code>def solution(logs, times):
+    answer = []
+    return answer</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/coding-test-en/p/ct8-05">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ct8-04/">← Same score, same rank</a> · <a href="../#ch8">Contents</a> · <a href="../ct8-06/">Choosing the length of shorts →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

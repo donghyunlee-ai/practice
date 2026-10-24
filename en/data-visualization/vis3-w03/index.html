@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four charts for four questions · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="Draw a university&#x27;s application data by department as four different charts on Axes in 2 rows and 2 columns. For each one, choose the plotting method that…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis3-w03/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Four charts for four questions · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="Draw a university&#x27;s application data by department as four different charts on Axes in 2 rows and 2 columns. For each one, choose the plotting method that…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis3-w03/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis3-w03" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch3">Chapter 3: Matplotlib in practice</a></nav>
+    <h1>Four charts for four questions</h1>
+    <p class="tiny muted">Write code · Medium · §3.2 Arranging and reaching Axes</p>
+    <div class="static-problem"><p>Draw a university&#x27;s application data by department as four different charts on Axes in 2 rows and 2 columns. For each one, choose the plotting method that fits the question.</p><p>At the top left, draw a horizontal bar chart of <code>applicants</code> to compare the number of applicants by department. The department names in <code>depts</code> are long, so horizontal bars are easier to read. Keep the bars in the order <code>barh()</code> draws them: pass <code>depts</code> as it is, without reversing it or flipping the y-axis. The title is <code>Applicants</code>.</p><p>At the top right, draw a pie chart of each department&#x27;s share of all applicants, and label each wedge with the department name. The title is <code>Share</code>.</p><p>At the bottom left, draw the distribution of interview scores, <code>scores</code>, as a histogram with 5 bins. The title is <code>Interview scores</code>.</p><p>At the bottom right, draw a scatter plot with the admission quota, <code>quota</code>, on the x-axis and the number of applicants, <code>applicants</code>, on the y-axis. The title is <code>Quota vs applicants</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis3-w03.png?v=20261024a" alt="Target figure for Four charts for four questions" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+depts = [&quot;Computer Science&quot;, &quot;Business Administration&quot;, &quot;Visual Design&quot;, &quot;Nursing&quot;]
+applicants = [420, 380, 150, 260]
+quota = [60, 80, 30, 50]
+scores = [58, 63, 66, 70, 72, 75, 77, 81, 84, 90]
+
+# Write your code here</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis3-w03">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis3-f01/">← A day&#x27;s records on 2×2 Axes</a> · <a href="../#ch3">Contents</a> · <a href="../vis3-p03/">Ranges of shared and unshared axes →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

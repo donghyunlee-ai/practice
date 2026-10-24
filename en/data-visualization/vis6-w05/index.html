@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An annotation on the peak found in the DataFrame · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="One DataFrame, dust, holds the daily average fine particulate matter (PM2.5) levels of two cities, and the Seoul rows have already been selected into…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis6-w05/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An annotation on the peak found in the DataFrame · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="One DataFrame, dust, holds the daily average fine particulate matter (PM2.5) levels of two cities, and the Seoul rows have already been selected into…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis6-w05/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis6-w05" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch6">Chapter 6: Polishing charts I</a></nav>
+    <h1>An annotation on the peak found in the DataFrame</h1>
+    <p class="tiny muted">Write code · Medium · §6.4 Annotations and reference lines</p>
+    <div class="static-problem"><p>One DataFrame, <code>dust</code>, holds the daily average fine particulate matter (PM2.5) levels of two cities, and the <code>Seoul</code> rows have already been selected into <code>seoul</code>. Draw a line chart of Seoul&#x27;s level (<code>pm25</code>) by day (<code>day</code>), label the line <code>Seoul</code>, and show the legend. Then add an arrow annotation to the point of the day with the highest level.</p><p>Write the day and the level in the annotation text, as in <code>Day 4: 44</code>. Calculate the day and the level from the DataFrame. Set the title to <code>Daily PM2.5</code>, the x-axis label to <code>Day</code>, and the y-axis label to <code>PM2.5 (ug/m3)</code>. Do not put any other text inside the chart besides this annotation.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis6-w05.png?v=20261024a" alt="Target figure for An annotation on the peak found in the DataFrame" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+import pandas as pd
+
+dust = pd.DataFrame({
+    &quot;day&quot;: [1, 2, 3, 4, 5, 6, 7] * 2,
+    &quot;city&quot;: [&quot;Busan&quot;] * 7 + [&quot;Seoul&quot;] * 7,
+    &quot;pm25&quot;: [18, 22, 25, 31, 27, 20, 16, 21, 28, 35, 44, 39, 26, 19],
+})
+seoul = dust[dust[&quot;city&quot;] == &quot;Seoul&quot;]
+
+# Write your code here</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis6-w05">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis6-p02/">← What idxmax returns on a filtered DataFrame</a> · <a href="../#ch6">Contents</a> · <a href="../vis6-w06/">A capacity reference line and sections over capacity →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

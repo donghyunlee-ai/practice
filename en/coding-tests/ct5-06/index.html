@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Question queue · Python Coding Tests · Python Practice</title>
+  <meta name="description" content="waiting holds the viewer numbers of the people who lined up to ask questions on a live stream, in the order they lined up. The front of the line is…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/coding-tests/ct5-06/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Question queue · Python Coding Tests · Python Practice">
+  <meta property="og:description" content="waiting holds the viewer numbers of the people who lined up to ask questions on a live stream, in the order they lined up. The front of the line is…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/coding-tests/ct5-06/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/coding-test/p/ct5-06" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Coding Tests</a> › <a href="../#ch5">Chapter 5: Stacks and queues</a></nav>
+    <h1>Question queue</h1>
+    <p class="tiny muted">Write code · Medium · §5.2 Queues</p>
+    <div class="static-problem"><p><code>waiting</code> holds the viewer numbers of the people who lined up to ask questions on a live stream, in the order they lined up. The front of the line is <code>waiting[0]</code>. The host performs the actions in <code>actions</code> in order. <code>&quot;answer&quot;</code> answers the question of the viewer at the front, and that viewer leaves the line. <code>&quot;later&quot;</code> sends the viewer at the front to the back of the line.</p><p>If a viewer who has already been sent back by <code>&quot;later&quot;</code> once gets <code>&quot;later&quot;</code> again, that viewer leaves the line without asking instead of going to the back. If the line is empty, an action does nothing. Complete the function <code>solution</code>, which returns a list of the numbers of the viewers whose questions were answered, in the order they were answered. If no question was answered, return an empty list <code>[]</code>.</p><h2>Function</h2><p><code>solution(waiting, actions)</code></p><h2>Constraints</h2><ul><li>The length of <code>waiting</code> is from 1 to 1,000,000.</li><li>Each viewer number is an integer from 0 to 1,000,000,000, and all the numbers are different.</li><li>The length of <code>actions</code> is from 1 to 200,000, and each element is <code>&quot;answer&quot;</code> or <code>&quot;later&quot;</code>.</li></ul><h2>Examples</h2><div class="static-table"><table><thead><tr><th>waiting</th><th>actions</th><th>result</th></tr></thead><tbody><tr><td><code>[7, 3, 9]</code></td><td><code>[&#x27;answer&#x27;, &#x27;later&#x27;, &#x27;answer&#x27;, &#x27;answer&#x27;]</code></td><td><code>[7, 9, 3]</code></td></tr><tr><td><code>[10, 20, 30, 40]</code></td><td><code>[&#x27;later&#x27;, &#x27;answer&#x27;, &#x27;later&#x27;, &#x27;answer&#x27;, &#x27;answer&#x27;]</code></td><td><code>[20, 40, 10]</code></td></tr></tbody></table></div><h2>Starter code</h2><pre class="static-code"><code>def solution(waiting, actions):
+    answer = []
+    return answer</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/coding-test-en/p/ct5-06">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ct5-03/">← Leaving the circle</a> · <a href="../#ch5">Contents</a> · <a href="../ct5-07/">Stopping comment spam →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

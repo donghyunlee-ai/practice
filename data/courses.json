@@ -1,0 +1,223 @@
+[
+ {
+  "id": "basics",
+  "kind": "book",
+  "lang": "ko",
+  "pair": "basics-en",
+  "eyebrow": "AI ERA SERIES 01",
+  "title": "AI 시대의 파이썬 기본기",
+  "subtitle": "경험 제로에서 시작하는 첫 파이썬 수업",
+  "lead": "책의 목차를 따라 장과 절마다 문제를 모았습니다. 부록 B의 네 유형(출력 예측, 빈칸 완성, 작성, 코드 리뷰)으로 풀고, 브라우저 안의 파이썬이 바로 채점합니다.",
+  "count": 258,
+  "counts": {
+   "predict": 99,
+   "fill": 26,
+   "write": 87,
+   "fix": 46
+  },
+  "levels": {
+   "1": 93,
+   "2": 143,
+   "3": 22
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ {
+  "id": "basics-en",
+  "kind": "book",
+  "lang": "en",
+  "pair": "basics",
+  "hidden": false,
+  "eyebrow": "AI ERA SERIES 01",
+  "title": "Python Basics",
+  "subtitle": "A first Python course for complete beginners",
+  "lead": "Problems follow the contents chapter by chapter and section by section. There are four question types (predict the output, fill in the blanks, write code, and code review), and Python in your browser checks your answer right away.",
+  "count": 258,
+  "counts": {
+   "predict": 99,
+   "fill": 26,
+   "write": 87,
+   "fix": 46
+  },
+  "levels": {
+   "1": 93,
+   "2": 143,
+   "3": 22
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ {
+  "id": "vis",
+  "kind": "book",
+  "lang": "ko",
+  "pair": "vis-en",
+  "eyebrow": "AI ERA SERIES 02",
+  "title": "AI 시대의 파이썬 데이터 시각화",
+  "subtitle": "차트 한 장에서 대시보드까지",
+  "lead": "책의 목차를 따라 장과 절마다 그래프 문제를 모았습니다. 코드로 그래프를 그리면 브라우저 안의 파이썬이 그림에서 값과 라벨을 읽어 목표 그림과 비교합니다.",
+  "card": "1~8장에 95문제가 있습니다. 처음 열 때 그래프 도구(matplotlib, pandas, seaborn, 약 20MB)를 한 번 내려받습니다.",
+  "ta": {
+   "n": 5,
+   "m": 20
+  },
+  "count": 95,
+  "counts": {
+   "predict": 14,
+   "fill": 12,
+   "write": 49,
+   "fix": 20
+  },
+  "levels": {
+   "1": 28,
+   "2": 59,
+   "3": 8
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "vis-en",
+  "kind": "book",
+  "lang": "en",
+  "pair": "vis",
+  "hidden": false,
+  "eyebrow": "AI ERA SERIES 02",
+  "title": "Python Data Visualization",
+  "subtitle": "From one chart to a dashboard",
+  "lead": "Graph problems follow the contents chapter by chapter and section by section. Draw a chart with code, and Python in your browser reads the values and labels from your figure and compares them with the target figure.",
+  "card": "Chapters 1–8. The first time you open a problem, your browser downloads the plotting libraries (matplotlib, pandas, seaborn, about 20 MB) once.",
+  "ta": {
+   "n": 5,
+   "m": 20
+  },
+  "count": 95,
+  "counts": {
+   "predict": 14,
+   "fill": 12,
+   "write": 49,
+   "fix": 20
+  },
+  "levels": {
+   "1": 28,
+   "2": 59,
+   "3": 8
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "id": "coding-test",
+  "kind": "test",
+  "lang": "ko",
+  "pair": "coding-test-en",
+  "eyebrow": "코딩 테스트",
+  "title": "파이썬 코딩 테스트 연습",
+  "subtitle": "숨은 테스트로 채점하는 작성형 문제",
+  "lead": "함수를 완성하면 보이는 예시와 숨은 테스트로 채점합니다. 제한 사항을 읽고, 가장 작은 값과 가장 큰 값 같은 경계를 스스로 떠올리는 연습입니다.",
+  "card": "기본기 1~8장(문자열, 리스트, 딕셔너리와 집합, 반복, 함수)을 배웠다면 1~10장을 풀 수 있습니다. 재귀는 9장에서 처음부터 다룹니다. 모의 시험으로 시간을 재고 풀어 볼 수 있고, 문항과 시간을 정해 둔 모의고사 세트도 있습니다.",
+  "count": 66,
+  "counts": {
+   "predict": 0,
+   "fill": 0,
+   "write": 66,
+   "fix": 0
+  },
+  "levels": {
+   "1": 15,
+   "2": 38,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "coding-test-en",
+  "kind": "test",
+  "lang": "en",
+  "pair": "coding-test",
+  "hidden": false,
+  "eyebrow": "CODING TESTS",
+  "title": "Python Coding Tests",
+  "subtitle": "Function problems graded by hidden tests",
+  "lead": "Complete a function, and it is graded on the visible examples and on hidden tests. Practice reading the constraints and thinking of edge cases yourself, such as the smallest and the largest values.",
+  "card": "If you have learned chapters 1–8 of Python Basics (strings, lists, dictionaries and sets, loops, functions), you can solve chapters 1–10. Chapter 9 introduces recursion from the start. You can also take a timed mock exam, including mock sets with fixed problems and time limits.",
+  "count": 66,
+  "counts": {
+   "predict": 0,
+   "fill": 0,
+   "write": 66,
+   "fix": 0
+  },
+  "levels": {
+   "1": 15,
+   "2": 38,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ }
+]

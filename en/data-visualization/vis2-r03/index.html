@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Argument order hidden behind an error · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="This code draws a line chart of typing speed (words typed per minute) measured every day for a week, but it stops with an error. After you fix the line…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis2-r03/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Argument order hidden behind an error · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="This code draws a line chart of typing speed (words typed per minute) measured every day for a week, but it stops with an error. After you fix the line…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis2-r03/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis2-r03" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch2">Chapter 2: Matplotlib basics</a></nav>
+    <h1>Argument order hidden behind an error</h1>
+    <p class="tiny muted">Code review · Medium · §2.5 Converting code and checking for errors</p>
+    <div class="static-problem"><p>This code draws a line chart of typing speed (words typed per minute) measured every day for a week, but it stops with an error. After you fix the line with the error, keep looking at the figure and check, one by one, the object each command goes to, the method names, and the order of the arguments.</p><p>Fix two lines so that the code draws a line chart with the days on the x-axis and the typing speed on the y-axis, plus the Axes title <code>Typing speed, Oct 6-12</code> and the y-axis label <code>Words per minute</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis2-r03.png?v=20261024a" alt="Target figure for Argument order hidden behind an error" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code to fix</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+days = [&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]
+wpm = [32, 35, 34, 38, 41, 40, 44]
+
+fig, ax = plt.subplots(figsize=(7, 3))
+ax.plot(wpm, days, marker=&quot;o&quot;)
+fig.set_title(&quot;Typing speed, Oct 6-12&quot;)
+ax.set_ylabel(&quot;Words per minute&quot;)
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis2-r03">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis2-r01/">← Errors made while converting from the plt style</a> · <a href="../#ch2">Contents</a> · <a href="../vis3-p01/">Counting Axes and lines →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

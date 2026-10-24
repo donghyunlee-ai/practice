@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charts for distribution and relationship questions · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="Draw two charts side by side that answer two questions. The left chart (ax1) shows how daily steps over 20 days are spread out, and the right chart (ax2)…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis1-f02/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Charts for distribution and relationship questions · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="Draw two charts side by side that answer two questions. The left chart (ax1) shows how daily steps over 20 days are spread out, and the right chart (ax2)…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis1-f02/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis1-f02" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch1">Chapter 1: Why we visualize, and getting set up</a></nav>
+    <h1>Charts for distribution and relationship questions</h1>
+    <p class="tiny muted">Fill in the blanks · Basic · §1.1 Visualization answers questions</p>
+    <div class="static-problem"><p>Draw two charts side by side that answer two questions. The left chart (<code>ax1</code>) shows how daily steps over 20 days are spread out, and the right chart (<code>ax2</code>) shows whether the dorm uses more power on days with a higher daytime high.</p><p>In each of the two blanks, write the drawing command that fits the question. Draw a histogram with <code>hist(list of values)</code> and a scatter plot with <code>scatter(x values, y values)</code>. On the scatter plot, put the temperature <code>temp</code> on the x-axis and the power use <code>power</code> on the y-axis.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis1-f02.png?v=20261024a" alt="Target figure for Charts for distribution and relationship questions" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code with blanks</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+steps = [7300, 5200, 8800, 6100, 9700, 7600, 3000, 8100, 6900, 7900, 10300, 6400, 7000, 8500, 4500, 9200, 7500, 13000, 5800, 11400]
+temp = [22, 25, 27, 29, 31, 33, 30, 26]                # daytime high (°C)
+power = [180, 205, 230, 262, 290, 318, 280, 214]       # dorm power use that day (kWh)
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 3.5))
+ax1.____
+ax1.set_title(&quot;How are daily steps spread?&quot;)
+ax1.set_xlabel(&quot;Steps&quot;)
+ax2.____
+ax2.set_title(&quot;Do hotter days use more power?&quot;)
+ax2.set_xlabel(&quot;High (°C)&quot;)
+ax2.set_ylabel(&quot;Power (kWh)&quot;)
+fig.tight_layout()
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis1-f02">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis1-f01/">← Charts for comparison and trend questions</a> · <a href="../#ch1">Contents</a> · <a href="../vis1-f03/">Reading a first line chart in five steps →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

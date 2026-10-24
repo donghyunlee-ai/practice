@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charts for comparison and trend questions · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="Using temperature data from one summer day, draw two charts side by side that answer two questions. The left chart (ax1) compares five cities to show…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis1-f01/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Charts for comparison and trend questions · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="Using temperature data from one summer day, draw two charts side by side that answer two questions. The left chart (ax1) compares five cities to show…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis1-f01/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis1-f01" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch1">Chapter 1: Why we visualize, and getting set up</a></nav>
+    <h1>Charts for comparison and trend questions</h1>
+    <p class="tiny muted">Fill in the blanks · Basic · §1.1 Visualization answers questions</p>
+    <div class="static-problem"><p>Using temperature data from one summer day, draw two charts side by side that answer two questions. The left chart (<code>ax1</code>) compares five cities to show which was hottest, and the right chart (<code>ax2</code>) shows how the temperature in Seoul changed over that day.</p><p>In each of the two blanks, write the drawing command that fits the question. Draw a bar chart with <code>bar(x values, bar heights)</code> and a line chart with <code>plot(x values, y values)</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis1-f01.png?v=20261024a" alt="Target figure for Charts for comparison and trend questions" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code with blanks</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+cities = [&quot;Seoul&quot;, &quot;Busan&quot;, &quot;Daegu&quot;, &quot;Gwangju&quot;, &quot;Jeju&quot;]
+high = [31, 28, 34, 32, 29]              # daytime high by city (°C)
+hours = [&quot;6am&quot;, &quot;9am&quot;, &quot;12pm&quot;, &quot;3pm&quot;, &quot;6pm&quot;, &quot;9pm&quot;]
+seoul = [23, 26, 30, 31, 28, 25]         # temperature in Seoul by time of day (°C)
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 3.5))
+ax1.____
+ax1.set_title(&quot;Which city was hottest?&quot;)
+ax1.set_ylabel(&quot;High (°C)&quot;)
+ax2.____
+ax2.set_title(&quot;How did Seoul&#x27;s temperature change?&quot;)
+ax2.set_ylabel(&quot;Temperature (°C)&quot;)
+fig.tight_layout()
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis1-f01">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../#ch1">Contents</a> · <a href="../vis1-f02/">Charts for distribution and relationship questions →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

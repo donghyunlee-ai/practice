@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An AI draft that needs one color and a unit · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="This is a draft bar chart of dorm power use by floor that an AI drew. Each bar has a different color, but the colors do not distinguish anything, and the…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis1-r02/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An AI draft that needs one color and a unit · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="This is a draft bar chart of dorm power use by floor that an AI drew. Each bar has a different color, but the colors do not distinguish anything, and the…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis1-r02/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis1-r02" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch1">Chapter 1: Why we visualize, and getting set up</a></nav>
+    <h1>An AI draft that needs one color and a unit</h1>
+    <p class="tiny muted">Code review · Basic · §1.5 Checking an AI draft</p>
+    <div class="static-problem"><p>This is a draft bar chart of dorm power use by floor that an AI drew. Each bar has a different color, but the colors do not distinguish anything, and the y-axis does not say what was measured or in what unit.</p><p>Fix one line and add one line so that every bar uses the single color <code>#2C7FB8</code> and the y-axis has the label <code>Power (kWh)</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis1-r02.png?v=20261024a" alt="Target figure for An AI draft that needs one color and a unit" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code to fix</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+floors = [&quot;1F&quot;, &quot;2F&quot;, &quot;3F&quot;, &quot;4F&quot;, &quot;5F&quot;]
+kwh = [420, 380, 455, 390, 510]
+
+# AI draft
+fig, ax = plt.subplots()
+ax.bar(floors, kwh, color=[&quot;red&quot;, &quot;orange&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;pink&quot;])
+ax.set_title(&quot;Power use by floor, Sep 2026&quot;)
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis1-r02">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis1-r01/">← An AI draft that cuts the y-axis at 40</a> · <a href="../#ch1">Contents</a> · <a href="../vis2-p01/">Days and sales at the same position →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

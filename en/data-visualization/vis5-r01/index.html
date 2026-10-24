@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A figure title stuck on the last panel · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="This code tries to add the figure title App use and satisfaction to a faceted chart split by operating system. It runs without errors, but there is no…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis5-r01/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A figure title stuck on the last panel · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="This code tries to add the figure title App use and satisfaction to a faceted chart split by operating system. It runs without errors, but there is no…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis5-r01/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis5-r01" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch5">Chapter 5: Seaborn in practice</a></nav>
+    <h1>A figure title stuck on the last panel</h1>
+    <p class="tiny muted">Code review · Medium · §5.3 Facets and returned objects</p>
+    <div class="static-problem"><p>This code tries to add the figure title <code>App use and satisfaction</code> to a faceted chart split by operating system. It runs without errors, but there is no figure title above the chart, and the right panel&#x27;s title <code>iOS</code> has been replaced with the figure title text.</p><p>Change one line so that the figure title appears above the chart while the panel titles <code>Android</code> and <code>iOS</code> stay as they are.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis5-r01.png?v=20261024a" alt="Target figure for A figure title stuck on the last panel" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Code to fix</h2><pre class="static-code"><code>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+survey = pd.DataFrame({
+    &quot;minutes&quot;: [45, 80, 120, 150, 200, 60, 95, 130, 170, 210, 30, 110],
+    &quot;satisfaction&quot;: [5, 6, 7, 8, 6, 4, 6, 7, 9, 8, 3, 6],
+    &quot;os&quot;: [&quot;Android&quot;] * 6 + [&quot;iOS&quot;] * 6,
+})
+
+g = sns.relplot(data=survey, x=&quot;minutes&quot;, y=&quot;satisfaction&quot;, col=&quot;os&quot;, kind=&quot;scatter&quot;, height=3)
+g.set_titles(&quot;{col_name}&quot;)
+plt.title(&quot;App use and satisfaction&quot;)
+g.figure.subplots_adjust(top=0.8)
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis5-r01">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis5-w06/">← A scatter plot split into panels by OS</a> · <a href="../#ch5">Contents</a> · <a href="../vis5-f02/">A 100% stacked bar chart with a different total each term →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

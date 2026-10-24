@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undo and redo · Python Coding Tests · Python Practice</title>
+  <meta name="description" content="commands holds, in order, the commands given to a text box. The command &quot;type &lt;word&gt;&quot; (for example, &quot;type hi&quot;) adds the word to the end of the text, with…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/coding-tests/ct5-04/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Undo and redo · Python Coding Tests · Python Practice">
+  <meta property="og:description" content="commands holds, in order, the commands given to a text box. The command &quot;type &lt;word&gt;&quot; (for example, &quot;type hi&quot;) adds the word to the end of the text, with…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/coding-tests/ct5-04/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/coding-test/p/ct5-04" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Coding Tests</a> › <a href="../#ch5">Chapter 5: Stacks and queues</a></nav>
+    <h1>Undo and redo</h1>
+    <p class="tiny muted">Write code · Medium · §5.1 Stacks</p>
+    <div class="static-problem"><p><code>commands</code> holds, in order, the commands given to a text box. The command <code>&quot;type &lt;word&gt;&quot;</code> (for example, <code>&quot;type hi&quot;</code>) adds the word to the end of the text, with no space before it. <code>&quot;undo&quot;</code> removes the most recently added word that is still in the text and sets it aside. <code>&quot;redo&quot;</code> takes the word that was set aside most recently and adds it back to the end of the text.</p><p>When a new <code>type</code> command is given, all the words set aside are thrown away. If there is no word to remove, <code>undo</code> does nothing, and if no word is set aside, <code>redo</code> does nothing. Complete the function <code>solution</code>, which returns the text after all the commands have been run. If the text is empty, return an empty string <code>&quot;&quot;</code>.</p><h2>Function</h2><p><code>solution(commands)</code></p><h2>Constraints</h2><ul><li>The length of <code>commands</code> is from 1 to 200,000.</li><li>Each command is <code>&quot;undo&quot;</code>, <code>&quot;redo&quot;</code>, or <code>&quot;type&quot;</code> followed by a space and a word. Each word is made of lowercase English letters, with a length from 1 to 10.</li></ul><h2>Examples</h2><div class="static-table"><table><thead><tr><th>commands</th><th>result</th></tr></thead><tbody><tr><td><code>[&#x27;type good&#x27;, &#x27;type day&#x27;, &#x27;undo&#x27;, &#x27;type night&#x27;]</code></td><td><code>&#x27;goodnight&#x27;</code></td></tr><tr><td><code>[&#x27;type see&#x27;, &#x27;type you&#x27;, &#x27;undo&#x27;, &#x27;redo&#x27;, &#x27;type soon&#x27;]</code></td><td><code>&#x27;seeyousoon&#x27;</code></td></tr></tbody></table></div><h2>Starter code</h2><pre class="static-code"><code>def solution(commands):
+    answer = &quot;&quot;
+    return answer</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/coding-test-en/p/ct5-04">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ct5-02/">← Undo</a> · <a href="../#ch5">Contents</a> · <a href="../ct5-05/">Matching format tags →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

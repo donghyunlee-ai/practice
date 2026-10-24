@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rewriting a seedling chart in the fig, ax style · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="The starter code draws the weekly height of tomato seedlings planted in the school garden in the plt style and saves it as a PNG. Keep the figure and the…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis2-w04/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rewriting a seedling chart in the fig, ax style · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="The starter code draws the weekly height of tomato seedlings planted in the school garden in the plt style and saves it as a PNG. Keep the figure and the…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis2-w04/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis2-w04" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch2">Chapter 2: Matplotlib basics</a></nav>
+    <h1>Rewriting a seedling chart in the fig, ax style</h1>
+    <p class="tiny muted">Write code · Medium · §2.5 Converting code and checking for errors</p>
+    <div class="static-problem"><p>The starter code draws the weekly height of tomato seedlings planted in the school garden in the <code>plt</code> style and saves it as a PNG. Keep the figure and the saved file the same, and rewrite the code so that it gives commands directly to <code>fig</code> and <code>ax</code>.</p><p>Create the Figure and the Axes in one line with <code>fig, ax = plt.subplots()</code>. Set the line, the title, the axis labels, and the y-axis range with <code>ax</code> methods, and save with a <code>fig</code> method. Keep the figure size, the file name <code>seedling.png</code>, and the resolution <code>dpi=100</code> as they are, and do not add any other arguments when you save. Grading also checks the pixel size of the saved PNG.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis2-w04.png?v=20261024a" alt="Target figure for Rewriting a seedling chart in the fig, ax style" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+weeks = [&quot;W1&quot;, &quot;W2&quot;, &quot;W3&quot;, &quot;W4&quot;, &quot;W5&quot;, &quot;W6&quot;]
+height = [4, 7, 12, 18, 25, 31]
+
+plt.figure(figsize=(7, 3))
+plt.plot(weeks, height, marker=&quot;o&quot;)
+plt.title(&quot;Tomato seedling height by week&quot;)
+plt.xlabel(&quot;Week&quot;)
+plt.ylabel(&quot;Height (cm)&quot;)
+plt.ylim(0, 40)
+plt.savefig(&quot;seedling.png&quot;, dpi=100)
+plt.show()</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis2-w04">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis2-w03/">← A bar chart saved as a PNG in a folder</a> · <a href="../#ch2">Contents</a> · <a href="../vis2-r01/">Errors made while converting from the plt style →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

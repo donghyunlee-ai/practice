@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>파이썬 연습 · 이동현</title>
+  <meta name="description" content="『AI 시대의 파이썬 기본기』 목차별 연습과 숨은 테스트로 채점하는 코딩 테스트 연습. 파이썬을 브라우저 안에서 실행하고 바로 채점합니다.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="assets/style.css?v=20261024a">
+  <script>
+    /* Google Analytics 4. donghyunlee.kr(site/hub/layouts/partials/extend-head.html)과 같은 설정이다.
+       광고 쿠키와 Google 신호는 끄고, 쿠키는 최대 14개월이며 방문 때마다 늘리지 않는다.
+       donghyunlee.kr에서 열 때만 켜고, 로컬 미리보기에서는 보내지 않는다.
+       학생이 쓴 코드와 풀이 기록은 이벤트로 보내지 않는다. */
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+  <script src="assets/app.js?v=20261024a" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#/"><img src="assets/logo.png" alt="" width="28" height="28"><span>파이썬 연습</span></a>
+      <nav class="topnav" aria-label="주 메뉴">
+        <span id="py-status" class="py-status" data-state="idle" role="status"></span>
+        <!-- 영어 화면에서는 app.js의 setLang이 아래 링크(data-nav)와 아래쪽 고지를 영어로 바꾼다. 언어 바꾸기 링크는 갈 곳이 보일 때만 켠다 -->
+        <a href="#/me" data-nav="me">내 기록</a>
+        <a href="https://donghyunlee.kr/books/" data-nav="books">도서</a>
+        <a href="https://donghyunlee.kr/" data-nav="home" class="nav-home">홈페이지</a>
+        <a id="lang-switch" class="lang-switch" href="#/en" lang="en" hreflang="en" hidden>English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <p class="loading">불러오는 중입니다.</p>
+    <noscript><div class="warnbox">이 페이지는 자바스크립트가 켜져 있어야 동작합니다.</div></noscript>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>파이썬은 이 브라우저 안에서 실행됩니다. 작성한 코드와 풀이 기록은 이 브라우저에만 저장되고 서버로 보내지 않습니다.</p>
+      <p>이 사이트는 방문 통계를 위해 Google Analytics를 사용합니다. 수집 항목, 보유 기간, 거부 방법은 <a href="https://donghyunlee.kr/privacy/">개인정보 처리방침</a>에 있습니다.</p>
+      <p>문제, 해설, 그림과 사이트 코드의 저작권은 이동현에게 있습니다. 혼자 공부하거나 수업에서 링크로 나누는 것은 자유이고, 복제, 재배포, 판매는 허락을 받아야 합니다.</p>
+      <p class="footer-links"><a href="https://donghyunlee.kr/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/privacy/">개인정보 처리방침</a> · <a href="#/terms">이용 안내와 저작권</a> · © 2026 이동현</p>
+    </div>
+  </footer>
+</body>
+</html>

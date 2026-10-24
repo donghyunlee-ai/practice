@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A new list without the spam account · Python Basics · Python Practice</title>
+  <meta name="description" content="You want to make a new list, clean, without the spam account &quot;spam01&quot;, while leaving the follower list followers as it is. You asked an AI and got this…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/python-basics/ch3-r04/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A new list without the spam account · Python Basics · Python Practice">
+  <meta property="og:description" content="You want to make a new list, clean, without the spam account &quot;spam01&quot;, while leaving the follower list followers as it is. You asked an AI and got this…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/python-basics/ch3-r04/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/basics/p/ch3-r04" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Basics</a> › <a href="../#ch3">Chapter 3: Lists and tuples</a></nav>
+    <h1>A new list without the spam account</h1>
+    <p class="tiny muted">Code review · Medium · §3.5, §3.7 [Pair coding with AI] Asking for list code</p>
+    <div class="static-problem"><p>You want to make a new list, <code>clean</code>, without the spam account <code>&quot;spam01&quot;</code>, while leaving the follower list <code>followers</code> as it is. You asked an AI and got this code. It runs without errors, but <code>&quot;spam01&quot;</code> disappears from <code>followers</code> too. Fix just one line so that it is removed only from <code>clean</code>. Grading runs the code again with different lists.</p><h2>Code to fix</h2><pre class="static-code"><code>followers = [&quot;mina&quot;, &quot;spam01&quot;, &quot;jun&quot;, &quot;sora&quot;]
+clean = followers
+clean.remove(&quot;spam01&quot;)
+print(followers)
+print(clean)</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/basics-en/p/ch3-r04">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ch3-p09/">← Lists inside a list made by multiplying</a> · <a href="../#ch3">Contents</a> · <a href="../ch4-p02/">Finding ranks with number keys →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

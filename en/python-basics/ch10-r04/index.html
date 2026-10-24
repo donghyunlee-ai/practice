@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A label list that stops at assert · Python Basics · Python Practice</title>
+  <meta name="description" content="This code labels each like count &quot;popular&quot; or &quot;normal&quot; twice: first with a loop (old, the reference), then with a one-line comprehension. Then it uses…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/python-basics/ch10-r04/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A label list that stops at assert · Python Basics · Python Practice">
+  <meta property="og:description" content="This code labels each like count &quot;popular&quot; or &quot;normal&quot; twice: first with a loop (old, the reference), then with a one-line comprehension. Then it uses…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/python-basics/ch10-r04/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/basics/p/ch10-r04" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Basics</a> › <a href="../#ch10">Chapter 10: Pythonic code</a></nav>
+    <h1>A label list that stops at assert</h1>
+    <p class="tiny muted">Code review · Medium · §10.3, §10.6 Polishing the math helper</p>
+    <div class="static-problem"><p>This code labels each like count <code>&quot;popular&quot;</code> or <code>&quot;normal&quot;</code> twice: first with a loop (<code>old</code>, the reference), then with a one-line comprehension. Then it uses <code>assert</code> to check that the two results match. When you run it, it stops at the <code>assert</code> line with an AssertionError. Fix just the comprehension line so that the code passes the <code>assert</code>.</p><h2>Code to fix</h2><pre class="static-code"><code>likes = [15, 100, 240, 0]
+old = []
+for n in likes:
+    if n &lt; 100:
+        old.append(&quot;normal&quot;)
+    else:
+        old.append(&quot;popular&quot;)
+
+new = [&quot;normal&quot; if n &gt;= 100 else &quot;popular&quot; for n in likes]
+assert old == new
+print(new)</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/basics-en/p/ch10-r04">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ch10-w06/">← Days with more likes than average</a> · <a href="../#ch10">Contents</a> · <a href="../ch10-p06/">Three branches packed into one line →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

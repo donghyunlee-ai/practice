@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A sorted horizontal bar chart that shows the sales ranking · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="The DataFrame books holds a bookstore&#x27;s copies sold by genre in May. Draw the copies sold as a horizontal bar chart, sorted so that the best-selling genre…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis5-w08/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A sorted horizontal bar chart that shows the sales ranking · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="The DataFrame books holds a bookstore&#x27;s copies sold by genre in May. Draw the copies sold as a horizontal bar chart, sorted so that the best-selling genre…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis5-w08/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis5-w08" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch5">Chapter 5: Seaborn in practice</a></nav>
+    <h1>A sorted horizontal bar chart that shows the sales ranking</h1>
+    <p class="tiny muted">Write code · Medium · §5.4 Comparing shares and sizes</p>
+    <div class="static-problem"><p>The DataFrame <code>books</code> holds a bookstore&#x27;s copies sold by genre in May. Draw the copies sold as a horizontal bar chart, sorted so that the best-selling genre is at the top. Sorting lets readers see the ranking even between genres with a small gap, such as Novel and Comics.</p><p>Set the title to <code>Books sold in May</code> and the x-axis label to <code>Copies sold</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis5-w08.png?v=20261024a" alt="Target figure for A sorted horizontal bar chart that shows the sales ranking" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+books = pd.DataFrame({
+    &quot;genre&quot;: [&quot;Novel&quot;, &quot;Comics&quot;, &quot;Essay&quot;, &quot;Travel&quot;, &quot;Science&quot;],
+    &quot;sold&quot;: [48, 52, 31, 17, 23],
+})
+
+# Write your code here</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis5-w08">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis5-w07/">← A pie chart of smartphone OS shares</a> · <a href="../#ch5">Contents</a> · <a href="../vis5-w09/">A heatmap of averages by OS and age group →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

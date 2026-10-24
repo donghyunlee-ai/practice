@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A one-page report that answers two questions · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="Make a one-page report from the number of patients seen at two clinics (Dental, Eye) over one week. The plt.subplot_mosaic() in the starter code makes a…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis7-w07/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A one-page report that answers two questions · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="Make a one-page report from the number of patients seen at two clinics (Dental, Eye) over one week. The plt.subplot_mosaic() in the starter code makes a…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis7-w07/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis7-w07" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch7">Chapter 7: Polishing charts II</a></nav>
+    <h1>A one-page report that answers two questions</h1>
+    <p class="tiny muted">Write code · Challenge · §7.5 A one-page report and peer review</p>
+    <div class="static-problem"><p>Make a one-page report from the number of patients seen at two clinics (Dental, Eye) over one week. The <code>plt.subplot_mosaic()</code> in the starter code makes a wide panel <code>axd[&quot;daily&quot;]</code> on the left and a narrow panel <code>axd[&quot;week&quot;]</code> on the right.</p><p>The left panel answers &quot;How did the numbers change from day to day?&quot; Draw <code>dental</code> first and <code>eye</code> next as lines, and add a legend with the line labels <code>Dental</code> and <code>Eye</code>. The title is <code>Patients per day</code>, and the y-axis range is 0 to 50.</p><p>The right panel answers &quot;Which clinic saw more patients over the whole week?&quot; Draw the weekly total for each clinic as vertical bars in the order <code>Dental</code>, <code>Eye</code>, and add value labels above the bars with <code>bar_label()</code>. The title is <code>Patients this week</code>, and the y-axis range is 0 to 250.</p><p>Color each clinic with the same color from <code>colors</code> in both panels. If you draw the bars with seaborn, pass <code>saturation=1</code> so the colors do not fade. The figure title is <code>Clinic report, one week</code>.</p><p>Write the source line <code>Source: practice data</code> in the lower-left corner inside the left panel, and save the figure as <code>clinic_report.pdf</code>.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis7-w07.png?v=20261024a" alt="Target figure for A one-page report that answers two questions" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+days = [&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;]
+dental = [24, 30, 28, 35, 32]
+eye = [40, 36, 42, 38, 45]
+colors = {&quot;Dental&quot;: &quot;#0072B2&quot;, &quot;Eye&quot;: &quot;#E69F00&quot;}
+
+fig, axd = plt.subplot_mosaic([[&quot;daily&quot;, &quot;daily&quot;, &quot;week&quot;]], figsize=(9, 3.5), layout=&quot;constrained&quot;)
+# Write your code here</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis7-w07">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis7-r03/">← Splitting a dual y-axis draft into two panels</a> · <a href="../#ch7">Contents</a> · <a href="../vis7-r04/">Reviewing the ranges, colors, and figure title of a colleague&#x27;s report →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>

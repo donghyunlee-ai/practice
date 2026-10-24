@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A 2×2 report of a plant&#x27;s weekly metrics · Python Data Visualization · Python Practice</title>
+  <meta name="description" content="Draw a report figure of a plant&#x27;s weekly metrics on Axes in 2 rows and 2 columns. Before drawing, you planned what goes on each Axes as follows. The top…">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/data-visualization/vis3-w07/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A 2×2 report of a plant&#x27;s weekly metrics · Python Data Visualization · Python Practice">
+  <meta property="og:description" content="Draw a report figure of a plant&#x27;s weekly metrics on Axes in 2 rows and 2 columns. Before drawing, you planned what goes on each Axes as follows. The top…">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/data-visualization/vis3-w07/">
+  <link rel="icon" href="../../../assets/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261024a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261024a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="../../../en/"><img src="../../../assets/logo.png" alt="" width="28" height="28"><span>Python Practice</span></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="../../../#/en/me">My progress</a>
+        <a href="https://donghyunlee.kr/en/books/">Books</a>
+        <a href="https://donghyunlee.kr/en/">Home</a>
+        <a class="lang-switch" href="../../../#/vis/p/vis3-w07" lang="ko" hreflang="ko">한국어</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Data Visualization</a> › <a href="../#ch3">Chapter 3: Matplotlib in practice</a></nav>
+    <h1>A 2×2 report of a plant&#x27;s weekly metrics</h1>
+    <p class="tiny muted">Write code · Challenge · §3.5 Putting it together and checking for errors</p>
+    <div class="static-problem"><p>Draw a report figure of a plant&#x27;s weekly metrics on Axes in 2 rows and 2 columns. Before drawing, you planned what goes on each Axes as follows.</p><p>The top left is output. Draw the actual output, <code>output</code>, first and the plan, <code>plan</code>, next as two lines on the same Axes, and add a legend with the labels <code>Actual</code> and <code>Plan</code>. The title is <code>Output</code>, the y-axis label is <code>Output (units)</code>, and the y-axis range is 0 to 1200.</p><p>The top right is a line chart of the defect rate, <code>defect_rate</code>. The title is <code>Defect rate</code>, the y-axis label is <code>Defect rate (%)</code>, and the y-axis range is 0 to 4.</p><p>The bottom left is a bar chart of energy use, <code>energy</code>. The title is <code>Energy use</code>, the y-axis label is <code>Energy (MWh)</code>, and the y-axis range is 0 to 60.</p><p>The bottom right is a bar chart of overtime hours, <code>overtime</code>. The title is <code>Overtime</code>, the y-axis label is <code>Overtime (hours)</code>, and the y-axis range is 0 to 40.</p><p>The four Axes share the x-axis so that they show the same weeks, and keep separate y-axes. Add the x-axis label <code>Week</code> only to the bottom two Axes, add the figure title <code>Weekly plant report</code>, and then tidy the margins.</p><figure class="static-fig"><img src="../../../data/figs/vis/vis3-w07.png?v=20261024a" alt="Target figure for A 2×2 report of a plant&#x27;s weekly metrics" loading="lazy"><figcaption>Target figure</figcaption></figure><h2>Starter code</h2><pre class="static-code"><code>import matplotlib.pyplot as plt
+
+weeks = [&quot;W1&quot;, &quot;W2&quot;, &quot;W3&quot;, &quot;W4&quot;, &quot;W5&quot;, &quot;W6&quot;]
+output = [820, 910, 880, 1040, 990, 1100]
+plan = [900, 900, 950, 950, 1000, 1000]
+defect_rate = [2.4, 1.9, 2.8, 3.1, 2.2, 1.7]
+energy = [41, 44, 43, 52, 49, 55]
+overtime = [12, 18, 15, 31, 22, 27]
+
+# Write your code here</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/vis-en/p/vis3-w07">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../vis3-r01/">← Checking an AI draft against the request</a> · <a href="../#ch3">Contents</a> · <a href="../vis3-r02/">A 2×2 club membership figure that stops with an error →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code and progress are saved only in this browser and are not sent to any server.</p><p>This site uses Google Analytics for visit statistics. The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. You are free to study with them on your own and to share links in classes. Copying, redistributing, or selling them requires permission.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+</body>
+</html>
