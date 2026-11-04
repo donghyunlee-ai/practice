@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A value that int() cannot convert · Python Basics · Python Practice</title>
+  <meta name="description" content="You run the code and type 3.5. Predict the output. Leave out the prompt text that input() shows.">
+  <link rel="canonical" href="https://donghyunlee.kr/practice/en/python-basics/ch9-p02/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A value that int() cannot convert · Python Basics · Python Practice">
+  <meta property="og:description" content="You run the code and type 3.5. Predict the output. Leave out the prompt text that input() shows.">
+  <meta property="og:url" content="https://donghyunlee.kr/practice/en/python-basics/ch9-p02/">
+  <link rel="icon" href="../../../assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="../../../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../../assets/icons/apple-touch-icon.png">
+  <script>
+    /* Appearance: read the same localStorage key 'appearance' (dark, light) as the homepage (donghyunlee.kr, Blowfish).
+       Without a choice, follow the device setting. Runs in head before painting to avoid a flash. */
+    (function () { try { var a = localStorage.getItem("appearance"); if (a === "dark" || a === "light") document.documentElement.setAttribute("data-theme", a); } catch (e) {} })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin>
+  <link rel="stylesheet" href="../../../assets/style.css?v=20261103a">
+  <link rel="stylesheet" href="../../../assets/static.css?v=20261103a">
+  <script>
+    (function () {
+      "use strict";
+      if (location.hostname !== "donghyunlee.kr" && location.hostname !== "www.donghyunlee.kr") return;
+      var measurementId = "G-39GT2JG4DL";
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted"
+      });
+      window.gtag("set", "ads_data_redaction", true);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        cookie_expires: 14 * 30 * 24 * 60 * 60,
+        cookie_update: false
+      });
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+      document.head.appendChild(script);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="https://donghyunlee.kr/en/" aria-label="Donghyun Lee ΛI Coding"><svg xmlns="http://www.w3.org/2000/svg" viewBox="64.3 -950.0 10783.6 1180.0" width="13.479em" height="1.475em" style="width:13.479em;height:1.475em" aria-hidden="true" focusable="false"><path d="M285.3 0H64.3V-720H286.8Q359 -720 419.1 -695.5Q479.2 -671 523.2 -625.5Q567.2 -580.1 591.2 -517Q615.2 -454 615.2 -376.8V-342.7Q615.2 -266 591.2 -202.7Q567.2 -139.5 523.4 -94.2Q479.7 -49 419.1 -24.5Q358.5 0 285.3 0ZM2191.6 -535.1H2320.7V-17.8Q2320.7 55.4 2288.3 106.6Q2255.9 157.7 2198.1 184.2Q2140.2 210.7 2063.6 210.7Q2029.9 210.7 1992.6 201.8Q1955.3 192.9 1921.4 174.1Q1887.5 155.3 1864.8 126.6L1927.6 42.5Q1952.3 71.2 1984.9 87.3Q2017.6 103.4 2057.1 103.4Q2095.7 103.4 2122.4 89.3Q2149.1 75.2 2163.5 48.2Q2177.8 21.3 2177.8 -16.8V-46.3Q2158.1 -24 2132.6 -9.9Q2096.7 9.9 2047.3 9.9Q1997.8 9.9 1958 -10.4Q1918.2 -30.7 1890 -67.3Q1861.8 -103.8 1846.7 -153.3Q1831.6 -202.7 1831.6 -261.1V-271.5Q1831.6 -332.8 1846.7 -383Q1861.8 -433.2 1889.8 -469.3Q1917.7 -505.4 1957.7 -525.2Q1997.8 -544.9 2048.2 -544.9Q2101.6 -544.9 2137.7 -525.2Q2165.7 -509.8 2186 -484.5ZM10847.9 -500V-250V73Q10847.9 106.7 10827.3 136.9Q10809.4 163.2 10777.8 183.5Q10748.3 202.3 10709.9 214Q10671.5 225.7 10628.4 228.9Q10585.5 232 10543.5 226.4Q10502.4 220.9 10466.8 207.5Q10429.8 193.6 10402.9 172.9Q10372.9 149.6 10358.8 120.1L10427.4 87.4Q10433.7 100.6 10449.5 112.8Q10467.2 126.5 10493.5 136.4Q10552 158.3 10622.8 153.1Q10657.5 150.5 10687.8 141.3Q10716.1 132.7 10736.8 119.4Q10755.3 107.6 10764.5 94.1Q10771.9 83.3 10771.9 73V-63.3Q10738.5 -29.6 10695.8 -10.7Q10649.1 10 10597.9 10Q10546.7 10 10500 -10.7Q10455 -30.6 10420.5 -66.8Q10386.1 -102.8 10367.3 -149.4Q10347.9 -197.4 10347.9 -250Q10347.9 -302.6 10367.3 -350.6Q10386.1 -397.2 10420.5 -433.2Q10455 -469.4 10500 -489.3Q10546.7 -510 10597.9 -510Q10649.1 -510 10695.8 -489.3Q10738.5 -470.4 10771.9 -436.7V-500ZM9459.5 -770V0H9383.5V-63.3Q9350.1 -29.6 9307.4 -10.7Q9260.7 10 9209.5 10Q9158.3 10 9111.6 -10.7Q9066.6 -30.6 9032.1 -66.8Q8997.7 -102.8 8978.9 -149.4Q8959.5 -197.4 8959.5 -250Q8959.5 -302.6 8978.9 -350.6Q8997.7 -397.2 9032.1 -433.2Q9066.6 -469.4 9111.6 -489.3Q9158.3 -510 9209.5 -510Q9260.7 -510 9307.4 -489.3Q9350.1 -470.4 9383.5 -436.7V-770ZM690.8 -262.1V-272.5Q690.8 -331.3 707.6 -381Q724.5 -430.7 756.6 -467.3Q788.7 -503.9 835.7 -524.4Q882.7 -544.9 943.5 -544.9Q1004.3 -544.9 1051.8 -524.4Q1099.3 -503.9 1131.7 -467.3Q1164.1 -430.7 1180.9 -381Q1197.7 -331.3 1197.7 -272.5V-262.1Q1197.7 -203.7 1180.9 -154Q1164.1 -104.3 1131.7 -67.5Q1099.3 -30.7 1052.3 -10.4Q1005.3 9.9 944.5 9.9Q883.7 9.9 836.5 -10.4Q789.2 -30.7 756.8 -67.5Q724.5 -104.3 707.6 -154Q690.8 -203.7 690.8 -262.1ZM8884.7 -250Q8884.7 -197.4 8865.3 -149.4Q8846.4 -102.8 8812.1 -66.8Q8777.5 -30.6 8732.6 -10.7Q8685.9 10 8634.7 10Q8583.5 10 8536.8 -10.7Q8491.8 -30.6 8457.3 -66.8Q8422.9 -102.8 8404.1 -149.4Q8384.7 -197.4 8384.7 -250Q8384.7 -302.6 8404.1 -350.6Q8422.9 -397.2 8457.3 -433.2Q8491.8 -469.4 8536.8 -489.3Q8583.5 -510 8634.7 -510Q8685.9 -510 8732.6 -489.3Q8777.5 -469.4 8812.1 -433.2Q8846.4 -397.2 8865.3 -350.6Q8884.7 -302.6 8884.7 -250ZM2570.4 -759.6V-475.9Q2596.1 -507.6 2631 -525.7Q2668.4 -544.9 2713.8 -544.9Q2753.4 -544.9 2785.8 -533.8Q2818.2 -522.7 2841.7 -498.2Q2865.2 -473.7 2878 -434.2Q2890.9 -394.6 2890.9 -338.2V0H2747.5V-339.2Q2747.5 -374.8 2737.3 -395.4Q2727.2 -415.9 2708.2 -424.5Q2689.1 -433.2 2661.4 -433.2Q2630.8 -433.2 2609.3 -421.8Q2587.7 -410.4 2574.9 -390.4Q2572.6 -386.8 2570.4 -382.9V0H2428V-759.6ZM5689.3 9.9Q5627 9.9 5577.5 -10.1Q5528.1 -30.2 5493.7 -65.8Q5459.3 -101.4 5441 -148.6Q5422.7 -195.8 5422.7 -249.2V-269Q5422.7 -329.8 5440.1 -380.3Q5457.4 -430.7 5489.8 -467.8Q5522.1 -504.9 5568.6 -524.9Q5615.1 -544.9 5673.5 -544.9Q5730.3 -544.9 5774.3 -526.2Q5818.4 -507.4 5848.3 -472.7Q5878.2 -438.1 5893.5 -389.9Q5908.8 -341.7 5908.8 -282.9V-223.5H5567.2Q5569.4 -205.9 5574.8 -189.9Q5584 -162.7 5601 -142.9Q5618.1 -123.1 5642.6 -112.3Q5667 -101.4 5698.2 -101.4Q5736.8 -101.4 5770.1 -116.5Q5803.5 -131.5 5827.7 -162.2L5897 -87Q5880.2 -62.8 5851.2 -40.5Q5822.3 -18.3 5781.8 -4.2Q5741.2 9.9 5689.3 9.9ZM6236.2 9.9Q6173.9 9.9 6124.5 -10.1Q6075 -30.2 6040.6 -65.8Q6006.3 -101.4 5988 -148.6Q5969.7 -195.8 5969.7 -249.2V-269Q5969.7 -329.8 5987 -380.3Q6004.3 -430.7 6036.7 -467.8Q6069.1 -504.9 6115.5 -524.9Q6162 -544.9 6220.4 -544.9Q6277.3 -544.9 6321.3 -526.2Q6365.3 -507.4 6395.2 -472.7Q6425.1 -438.1 6440.4 -389.9Q6455.8 -341.7 6455.8 -282.9V-223.5H6114.1Q6116.4 -205.9 6121.7 -189.9Q6130.9 -162.7 6147.9 -142.9Q6165 -123.1 6189.5 -112.3Q6214 -101.4 6245.1 -101.4Q6283.7 -101.4 6317.1 -116.5Q6350.4 -131.5 6374.7 -162.2L6443.9 -87Q6427.1 -62.8 6398.2 -40.5Q6369.2 -18.3 6328.7 -4.2Q6288.1 9.9 6236.2 9.9ZM3098.1 -535.1 3198.8 -198.9 3299.3 -535.1H3452.1L3237 80.6Q3230.1 100.9 3218.5 124.1Q3206.9 147.4 3187.3 168.4Q3167.8 189.4 3138.4 202.7Q3109 216.1 3066.4 216.1Q3046.2 216.1 3033.3 213.6Q3020.4 211.2 3002.6 206.7V102.4Q3008.1 102.4 3014 102.6Q3019.9 102.9 3025.4 102.9Q3053.6 102.9 3071.4 96.4Q3089.2 90 3100.1 76.9Q3110.9 63.8 3117.4 43L3133.4 1.7L2945.3 -535.1ZM4215.2 -379.4V0H4072.7V-535.1H4206.3L4211.2 -471.3Q4212.7 -473.1 4214.2 -475Q4241.9 -508.8 4280.2 -526.9Q4318.5 -544.9 4366 -544.9Q4403.6 -544.9 4434.7 -534.1Q4465.9 -523.2 4488.4 -499.5Q4510.9 -475.7 4523 -436.6Q4535.1 -397.6 4535.1 -341.2V0H4391.7V-341.7Q4391.7 -377.3 4381.8 -397.1Q4371.9 -416.9 4352.9 -425Q4333.8 -433.2 4306.2 -433.2Q4277.5 -433.2 4256.5 -421.8Q4235.4 -410.4 4221.8 -390.4Q4218.3 -385.2 4215.2 -379.4ZM1424.7 -379.4V0H1282.3V-535.1H1415.8L1420.7 -471.3Q1422.2 -473.2 1423.7 -475Q1451.4 -508.8 1489.7 -526.9Q1528 -544.9 1575.5 -544.9Q1613.1 -544.9 1644.2 -534.1Q1675.4 -523.2 1697.9 -499.5Q1720.4 -475.7 1732.5 -436.6Q1744.6 -397.6 1744.6 -341.2V0H1601.2V-341.7Q1601.2 -377.3 1591.3 -397.1Q1581.4 -416.9 1562.4 -425Q1543.4 -433.2 1515.7 -433.2Q1487 -433.2 1466 -421.8Q1444.9 -410.4 1431.3 -390.4Q1427.8 -385.2 1424.7 -379.4ZM3825 -156.3V-535.1H3967.4V0H3833.4L3829.7 -55.8Q3805.9 -25.8 3771.1 -8.7Q3733.5 9.9 3682.6 9.9Q3643.5 9.9 3610.6 -1.2Q3577.7 -12.4 3554.3 -36.3Q3530.8 -60.3 3517.7 -98.2Q3504.6 -136 3504.6 -189.4V-535.1H3647V-188.4Q3647 -164.7 3652.7 -148.4Q3658.4 -132 3668.7 -121.6Q3679.1 -111.3 3693.2 -106.8Q3707.3 -102.4 3724.6 -102.4Q3768.6 -102.4 3794.1 -120.2Q3814.1 -134.2 3825 -156.3ZM5366.9 -115.7V0H4904V-720H5052.4V-115.7ZM8292.7 -554.3Q8263.5 -587.4 8226.1 -609.9Q8189.5 -631.9 8148.1 -642Q8106.7 -652.1 8064.3 -649.5Q8021 -646.7 7980.4 -630.8Q7939.7 -614.9 7905.6 -587.4Q7872.2 -560.4 7848.1 -524.5Q7823.8 -488.6 7811 -447.1Q7797.9 -404.6 7797.9 -360Q7797.9 -315.4 7811 -272.9Q7823.8 -231.4 7848.1 -195.5Q7872.2 -159.6 7905.6 -132.6Q7939.7 -105.1 7980.4 -89.2Q8021 -73.3 8064.3 -70.5Q8106.7 -67.9 8148.1 -78Q8189.5 -88.1 8226.1 -110.1Q8263.5 -132.6 8292.7 -165.7L8349.7 -115.4Q8312.7 -73.5 8265.2 -45Q8218.7 -17 8166.1 -4.2Q8113.5 8.7 8059.5 5.3Q8004.4 1.8 7952.7 -18.4Q7901 -38.6 7857.8 -73.5Q7815.6 -107.7 7785 -153Q7754.5 -198.2 7738.4 -250.5Q7721.9 -303.9 7721.9 -360Q7721.9 -416.1 7738.4 -469.5Q7754.5 -521.8 7785 -567Q7815.6 -612.3 7857.8 -646.5Q7901 -681.4 7952.7 -701.6Q8004.4 -721.8 8059.5 -725.3Q8113.5 -728.7 8166.1 -715.8Q8218.7 -703 8265.2 -675Q8312.7 -646.5 8349.7 -604.6ZM212.6 -115.7H285.3Q343.7 -115.7 383.7 -142.2Q423.8 -168.6 444.3 -219.6Q464.8 -270.5 464.8 -342.7V-377.8Q464.8 -433.2 453.2 -475.2Q441.6 -517.3 418.8 -545.9Q396.1 -574.6 363 -589.2Q329.8 -603.8 286.8 -603.8H212.6ZM8808.7 -250Q8808.7 -287.8 8794.8 -322.2Q8781.4 -355.3 8757.1 -380.7Q8733 -406 8701.8 -419.8Q8669.8 -434 8634.7 -434Q8599.6 -434 8567.6 -419.8Q8536.4 -406 8512.3 -380.7Q8487.9 -355.3 8474.6 -322.2Q8460.7 -287.8 8460.7 -250Q8460.7 -212.2 8474.6 -177.8Q8487.9 -144.7 8512.3 -119.3Q8536.4 -94 8567.6 -80.2Q8599.6 -66 8634.7 -66Q8669.8 -66 8701.8 -80.2Q8733 -94 8757.1 -119.3Q8781.4 -144.7 8794.8 -177.8Q8808.7 -212.2 8808.7 -250ZM9383.5 -250Q9383.5 -287.8 9369.6 -322.2Q9356.2 -355.3 9331.9 -380.7Q9307.8 -406 9276.6 -419.8Q9244.6 -434 9209.5 -434Q9174.4 -434 9142.4 -419.8Q9111.2 -406 9087.1 -380.7Q9062.7 -355.3 9049.4 -322.2Q9035.5 -287.8 9035.5 -250Q9035.5 -212.2 9049.4 -177.8Q9062.7 -144.7 9087.1 -119.3Q9111.2 -94 9142.4 -80.2Q9174.4 -66 9209.5 -66Q9244.6 -66 9276.6 -80.2Q9307.8 -94 9331.9 -119.3Q9356.2 -144.7 9369.6 -177.8Q9383.5 -212.2 9383.5 -250ZM10771.9 -250Q10771.9 -287.8 10758 -322.2Q10744.6 -355.3 10720.3 -380.7Q10696.2 -406 10665 -419.8Q10633 -434 10597.9 -434Q10562.8 -434 10530.8 -419.8Q10499.6 -406 10475.5 -380.7Q10451.1 -355.3 10437.8 -322.2Q10423.9 -287.8 10423.9 -250Q10423.9 -212.2 10437.8 -177.8Q10451.1 -144.7 10475.5 -119.3Q10499.6 -94 10530.8 -80.2Q10562.8 -66 10597.9 -66Q10633 -66 10665 -80.2Q10696.2 -94 10720.3 -119.3Q10744.6 -144.7 10758 -177.8Q10771.9 -212.2 10771.9 -250ZM6811.7 0H6730.7L6999.1 -727.5L7267.4 0H7186.4L6999.1 -507.9ZM9755.5 0V-500H9831.5V-436.7Q9864.8 -470.4 9907.6 -489.3Q9954.3 -510 10005.5 -510Q10056.7 -510 10103.4 -489.3Q10148.3 -469.4 10182.9 -433.2Q10217.2 -397.2 10236.1 -350.6Q10255.5 -302.6 10255.5 -250V0H10179.5V-250Q10179.5 -287.8 10165.6 -322.2Q10152.2 -355.3 10127.9 -380.7Q10103.8 -406 10072.6 -419.8Q10040.6 -434 10005.5 -434Q9970.4 -434 9938.4 -419.8Q9907.2 -406 9883.1 -380.7Q9858.7 -355.3 9845.4 -322.2Q9831.5 -287.8 9831.5 -250V0ZM833.2 -272.5V-262.1Q833.2 -228.5 839.2 -199.3Q845.1 -170.1 858.2 -148.1Q871.3 -126.1 892.6 -113.7Q913.8 -101.4 944.5 -101.4Q974.2 -101.4 995.4 -113.7Q1016.7 -126.1 1029.6 -148.1Q1042.4 -170.1 1048.6 -199.3Q1054.8 -228.5 1054.8 -262.1V-272.5Q1054.8 -305.1 1048.6 -334Q1042.4 -363 1029.3 -385.5Q1016.2 -408 994.9 -420.8Q973.7 -433.7 943.5 -433.7Q913.4 -433.7 892.3 -420.8Q871.3 -408 858.2 -385.5Q845.1 -363 839.2 -334Q833.2 -305.1 833.2 -272.5ZM1974.1 -271.5V-261.1Q1974.1 -228 1980.5 -199.3Q1986.9 -170.6 2000.5 -148.6Q2014.1 -126.6 2034.6 -114.5Q2055.2 -102.4 2083.4 -102.4Q2122.4 -102.4 2147.1 -118.9Q2166.1 -131.6 2177.8 -151.8V-382.6Q2173.9 -389.5 2169.4 -395.6Q2156 -413.4 2134.8 -423.3Q2113.5 -433.2 2084.3 -433.2Q2056.2 -433.2 2035.6 -420.6Q2015.1 -408 2001.5 -386.2Q1987.9 -364.5 1981 -335Q1974.1 -305.6 1974.1 -271.5ZM7345.9 0V-720H7421.9V0ZM9645.5 -500V0H9569.5V-500ZM6115.9 -318.5H6315.8V-329.3Q6315.8 -359 6305.2 -382.5Q6294.6 -406 6273.3 -419.8Q6252 -433.7 6218.9 -433.7Q6190.7 -433.7 6170.4 -421.3Q6150.2 -409 6137.6 -386.7Q6124.9 -364.5 6118.8 -334.5Q6117.1 -326.7 6115.9 -318.5ZM5569 -318.5H5768.9V-329.3Q5768.9 -359 5758.3 -382.5Q5747.6 -406 5726.4 -419.8Q5705.1 -433.7 5672 -433.7Q5643.8 -433.7 5623.5 -421.3Q5603.2 -409 5590.6 -386.7Q5578 -364.5 5571.8 -334.5Q5570.2 -326.7 5569 -318.5ZM9645.5 -697.6V-621.6H9569.5V-697.6Z" fill="currentColor"/></svg></a>
+      <nav class="topnav" aria-label="Main menu">
+        <a href="https://donghyunlee.kr/en/posts/" class="nav-site">Writing</a>
+        <a href="https://donghyunlee.kr/en/about/" class="nav-site">About</a>
+        <a href="https://donghyunlee.kr/en/books/" class="nav-books">Books</a>
+        <a href="../../../en/" class="nav-site" aria-current="page">Coding Tests</a>
+        <a href="https://donghyunlee.kr/en/tools/" class="nav-site">Tools</a>
+        <a href="../../../#/en/me">My progress</a>
+        <a class="lang-switch" href="../../../#/basics/p/ch9-p02" lang="ko" hreflang="ko" data-short="KO" aria-label="한국어">한국어</a>
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch between light and dark mode" title="Switch between light and dark mode"><svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg><svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12h2.5M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg></button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap static-page" tabindex="-1">
+    <nav class="static-crumbs tiny"><a href="../../">Python Practice</a> › <a href="../">Python Basics</a> › <a href="../#ch9">Chapter 9: File input and output</a></nav>
+    <h1>A value that int() cannot convert</h1>
+    <p class="tiny muted">Predict the output · Medium · §9.1 Talking to your program</p>
+    <div class="static-problem"><p>You run the code and type 3.5. Predict the output. Leave out the prompt text that <code>input()</code> shows.</p><h2>Code</h2><pre class="static-code"><code>hours = int(input(&quot;Hours watched: &quot;))
+print(hours * 60)</code></pre></div>
+    <p class="static-actions"><a class="btn mint" href="../../../#/basics-en/p/ch9-p02">Solve this problem in your browser</a></p>
+    <p class="tiny muted">Python runs in your browser and checks your answer right away. Hints and the answer are on the problem page.</p>
+    <nav class="static-pager tiny"><a href="../ch9-p01/">← Numbers that come in as strings</a> · <a href="../#ch9">Contents</a> · <a href="../ch9-f01/">Where to convert to numbers →</a></nav>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <p>Python runs inside this browser. Your code, answers, and progress are saved only in this browser.</p><p>This site uses Google Analytics for visit statistics and grading statistics (problem number, correct or wrong, and error name; your code and answers are not sent). The <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> explains what is collected, how long it is kept, and how to opt out.</p><p>The problems, explanations, figures, and site code are copyrighted by Donghyun Lee. Copying, redistributing, or selling them requires permission. Copying or reusing the site code (the pages and the grader) without permission is prohibited.</p><p class="footer-links"><a href="https://donghyunlee.kr/en/">donghyunlee.kr</a> · <a href="https://donghyunlee.kr/en/privacy/">Privacy policy</a> · <a href="../../../#/en/terms">Terms and copyright</a> · © 2026 Donghyun Lee</p>
+    </div>
+  </footer>
+  <script>
+    /* Light and dark mode button (same as app.js in the app pages, localStorage 'appearance') */
+    (function () {
+      var btn = document.getElementById("theme-toggle"), root = document.documentElement;
+      if (!btn) return;
+      var dark = function () { return (root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark"; };
+      var mark = function () { btn.setAttribute("aria-pressed", String(dark())); };
+      mark();
+      btn.addEventListener("click", function () {
+        var next = dark() ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("appearance", next); } catch (e) {}
+        mark();
+      });
+      btn.addEventListener("contextmenu", function (ev) {
+        ev.preventDefault();
+        root.removeAttribute("data-theme");
+        try { localStorage.removeItem("appearance"); } catch (e) {}
+        mark();
+      });
+    })();
+  </script>
+</body>
+</html>
