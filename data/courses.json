@@ -1,0 +1,225 @@
+[
+ {
+  "id": "basics",
+  "kind": "book",
+  "lang": "ko",
+  "pair": "basics-en",
+  "eyebrow": "AI ERA SERIES 01",
+  "title": "AI 시대의 파이썬 기본기",
+  "subtitle": "경험 제로에서 시작하는 첫 파이썬 수업",
+  "lead": "숫자와 문자열부터 함수, 파일 입출력, 클래스, 예외처리까지 책의 장과 절을 따라 풉니다. 답을 내면 브라우저에서 바로 채점합니다.",
+  "count": 258,
+  "counts": {
+   "predict": 99,
+   "fill": 26,
+   "write": 87,
+   "fix": 46
+  },
+  "levels": {
+   "1": 93,
+   "2": 143,
+   "3": 22
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ {
+  "id": "basics-en",
+  "kind": "book",
+  "lang": "en",
+  "pair": "basics",
+  "hidden": false,
+  "eyebrow": "AI ERA SERIES 01",
+  "title": "Python Basics",
+  "subtitle": "A first Python course for complete beginners",
+  "lead": "Work through the chapters and sections, from numbers and strings to functions, file I/O, classes, and exceptions. Python in your browser grades your answers right away.",
+  "count": 258,
+  "counts": {
+   "predict": 99,
+   "fill": 26,
+   "write": 87,
+   "fix": 46
+  },
+  "levels": {
+   "1": 93,
+   "2": 143,
+   "3": 22
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ]
+ },
+ {
+  "id": "vis",
+  "kind": "book",
+  "lang": "ko",
+  "pair": "vis-en",
+  "eyebrow": "AI ERA SERIES 02",
+  "title": "AI 시대의 파이썬 데이터 시각화",
+  "subtitle": "차트 한 장에서 대시보드까지",
+  "lead": "Matplotlib, Seaborn, Plotly, Streamlit 문제를 책의 장과 절을 따라 풉니다. 그린 그래프는 값과 라벨을 목표 그림과 비교해 채점합니다.",
+  "ta": {
+   "n": 5,
+   "m": 20
+  },
+  "count": 135,
+  "counts": {
+   "predict": 18,
+   "fill": 19,
+   "write": 70,
+   "fix": 28
+  },
+  "levels": {
+   "1": 37,
+   "2": 85,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "vis-en",
+  "kind": "book",
+  "lang": "en",
+  "pair": "vis",
+  "hidden": false,
+  "eyebrow": "AI ERA SERIES 02",
+  "title": "Python Data Visualization",
+  "subtitle": "From one chart to a dashboard",
+  "lead": "Practice Matplotlib, Seaborn, Plotly, and Streamlit chapter by chapter. Python in your browser grades your charts by comparing their values and labels with the target figure.",
+  "ta": {
+   "n": 5,
+   "m": 20
+  },
+  "count": 135,
+  "counts": {
+   "predict": 18,
+   "fill": 19,
+   "write": 70,
+   "fix": 28
+  },
+  "levels": {
+   "1": 37,
+   "2": 85,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "id": "coding-test",
+  "kind": "test",
+  "lang": "ko",
+  "pair": "coding-test-en",
+  "eyebrow": "AI ERA SERIES 03",
+  "title": "AI 시대의 파이썬 코딩 테스트",
+  "subtitle": "숨은 테스트로 채점하는 작성형 문제",
+  "lead": "기본기 1~8장을 배운 뒤 구현부터 동적 계획법까지 함수 문제와 시간을 재는 모의고사를 풉니다. 보이는 예시와 숨은 테스트로 채점합니다.",
+  "count": 66,
+  "counts": {
+   "predict": 0,
+   "fill": 0,
+   "write": 66,
+   "fix": 0
+  },
+  "levels": {
+   "1": 15,
+   "2": 38,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "id": "coding-test-en",
+  "kind": "test",
+  "lang": "en",
+  "pair": "coding-test",
+  "hidden": false,
+  "eyebrow": "AI ERA SERIES 03",
+  "title": "Python Coding Tests",
+  "subtitle": "Function problems graded by hidden tests",
+  "lead": "After chapters 1 to 8 of Python Basics, solve function problems from implementation to dynamic programming and take timed mock exams. Python in your browser grades each function with visible examples and hidden tests.",
+  "count": 66,
+  "counts": {
+   "predict": 0,
+   "fill": 0,
+   "write": 66,
+   "fix": 0
+  },
+  "levels": {
+   "1": 15,
+   "2": 38,
+   "3": 13
+  },
+  "chapters": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ]
+ }
+]
