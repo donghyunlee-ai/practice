@@ -1,0 +1,46 @@
+/* 정적 페이지(tools/static_pages.py가 만드는 /practice/<과목>/…, /practice/en/…)의 모양. 색과 글꼴은 style.css의 토큰을 그대로 쓴다. */
+.static-page { padding-top: 22px; padding-bottom: 40px; }
+.static-page h1 { font-size: 28px; line-height: 1.3; margin: 6px 0 8px; }
+.static-page h2 { font-size: 19px; margin: 26px 0 8px; }
+.static-page h3 { font-size: 16px; margin: 14px 0 6px; }
+.static-page .lead { margin-bottom: 16px; }
+.static-crumbs { color: var(--muted); margin: 0 0 10px; }
+.static-crumbs a { color: var(--text-2); }
+.static-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 10px; align-items: stretch; }
+@media (min-width: 1000px) {
+  .static-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.static-course { display: flex; flex-direction: column; gap: 4px; }
+.static-course h2 { margin: 2px 0 2px; font-size: 20px; line-height: 1.32; }
+.static-course h2 a { color: var(--text); text-decoration: none; }
+.static-course h2 a:hover { color: var(--primary); }
+.static-course .subtitle { margin: 0 0 6px; }
+.static-course > p:not(.eyebrow):not(.subtitle):not(.tiny):not(.static-actions) { color: var(--text-2); font-size: 14.5px; line-height: 1.62; flex: 1; margin: 0 0 8px; }
+.static-course > p.tiny { min-height: 4.2em; display: flex; align-items: flex-end; margin: 0 0 4px; line-height: 1.4; }
+.static-actions { display: flex; flex-wrap: nowrap; gap: 8px; margin: 8px 0 0; }
+.static-actions .btn { text-decoration: none; padding: 7px 11px; font-size: 14px; flex: 1 1 0; min-width: 0; }
+@media (max-width: 420px) {
+  .static-actions { flex-wrap: wrap; }
+  .static-actions .btn { flex: 1 1 100%; }
+}
+@media (min-width: 721px) {
+  .static-course.run-entry { flex-direction: row; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; }
+  .static-course.run-entry .static-actions { margin: 0; flex: none; }
+  .static-course.run-entry .static-actions .btn { flex: none; padding: 8px 16px; font-size: 15px; }
+}
+.static-ch { border-top: 1px solid var(--border); margin-top: 22px; }
+.static-secs { list-style: none; padding: 0; margin: 0; }
+.static-sec ul { margin: 0 0 6px; padding-left: 20px; }
+.static-sec li { margin: 3px 0; }
+.static-sec .sub, .static-ch .sub { color: var(--muted); font-weight: 500; font-size: 13.5px; margin-left: 6px; }
+.static-problem p { margin: 0 0 10px; }
+.static-code { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.static-code code { font-family: var(--mono); white-space: pre; }
+.static-table { overflow-x: auto; }
+.static-table table { border-collapse: collapse; font-size: 14px; }
+.static-table th, .static-table td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; }
+.static-fig { margin: 12px 0; }
+.static-fig img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
+.static-fig figcaption { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.static-pager { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 18px; color: var(--muted); }
+.static-pager a { color: var(--text-2); }
